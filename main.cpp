@@ -34,7 +34,7 @@ int doAllTheThings()
     cout << "Line 3 has: " << line3->getNumCustomers() << " customers." << endl;
     cout << "Line 4 has: " << line4->getNumCustomers() << " customers." << endl;
     cout << "Line 5 has: " << line5->getNumCustomers() << " customers." << endl;
-
+    cout << endl << endl << endl;
     //universal and better practice equivalent to system("PAUSE")
     cout << "Press enter to continue...";
     cin.get();
@@ -120,9 +120,14 @@ void line::addCustomer()
 
 void line::removeCustomer()
 {
+  cout << numCustomers.size();
+  if (!numCustomers.size())
+  {return;}
   cout << "Looks like someone is all done shopping!" << endl;
-  //numCustomers.front();
-  numCustomers.pop_front();
+  numCustomers.front();
+  cout << "We go done with front." << endl;
+  numCustomers.pop();
+  cout << "done with the pop." << endl;
   //numCustomers.back();
   return;
 
