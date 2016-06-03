@@ -10,16 +10,19 @@ using namespace std;
 
 class line
 {
-public:
+private:
   //We don't have to keep customers in an array,
   //only need to know how many in line, so it can just be an int
   //and then we can randomly lower the number
   //actually I think I have to use a queue
   queue<int> numCustomers;
 
-private:
+public:
   //getters
-  int getNumCustomers;
-  void addCustomer;
+  line();
+  ~line();
+  int getNumCustomers();
+  void addCustomer();
+  void removeCustomer();
 
 };
